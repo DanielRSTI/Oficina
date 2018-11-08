@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/logo.png">
+
+    <title>Oficina de Hambúrguer</title>
+
+    <!-- Bootstrap core CSS and My Css -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/meu.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    
+    <!-- Custom styles -->
+    <link href="css/full-width-pics.css" rel="stylesheet">
+    <!-- FONTES GOOGLE -->
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+
+
+</script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoNAfdu2wRlp3E3pE_GbdnHXcW7dVx3ek&callback=initMap"></script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+		<style type="text/css">
+		#map_content {
+			height: 400px;
+			margin: 10px 0;
+			}
+		
+	#page {
+    width: auto;
+    text-align: center;
+    padding: 100%px;
+    }
+   img {
+    max-width: 100%;
+   }
+
+	</style>
+	
+	
+	<script type="text/javascript">
+		var map;
+		var directionsService = new google.maps.DirectionsService();
+		var info = new google.maps.InfoWindow({maxWidth: 200});
+		
+		var marker = new google.maps.Marker({
+			title: 'Google Belo Horizonte',
+			icon: 'img/marker.png',
+			position: new google.maps.LatLng('-19.91631', '-43.9323')
+		});
+		
+		function initialize() {
+			var options = {
+					zoom: 15,
+					center: marker.position,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			
+			map = new google.maps.Map($('#map_content')[0], options);
+			
+			marker.setMap(map);
+			
+			google.maps.event.addListener(marker, 'click', function() {
+				info.setContent('Oficina de hamburguer, R. Sapucaí, Belo Horizonte - MG, Brasil');
+				info.open(map, marker);
+			}); 
+			
+			
+		}
+		
+		$(document).ready(function() {
+			$('#form_route').submit(function() {
+				info.close();
+				marker.setMap(null);
+				
+				var directionsDisplay = new google.maps.DirectionsRenderer();
+				
+				var request = { 
+						origin: $("#route_from").val(),
+						destination: marker.position,
+						travelMode: google.maps.DirectionsTravelMode.DRIVING
+				};
+				
+				directionsService.route(request, function(response, status) {
+						if (status == google.maps.DirectionsStatus.OK) {
+							directionsDisplay.setDirections(response);
+							directionsDisplay.setMap(map);
+						}
+				});
+				
+				return false;
+			});
+		});
+	</script>
+
+  </head>
+
+  <body onload="initialize()">
+
+  
+    <!-- Nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fontGochiBrand animated fadeIn animacao_3" href="#">Hamburgueria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link fontGochiBrand animated fadeIn animacao_3" href="index.php">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fontGochiBrand animated fadeIn animacao_3" href="login.php">Login/Cadastro</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link fontGochiBrand animated fadeIn animacao_3" href="#">Sobre Nós</a>
+            </li>              
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+
+    <!-- Header -->
+    <header class="py-5 bg-image-full" style="background-image: url(img/banner.jpg);">
+      <img class="img-fluid d-block mx-auto animated fadeInLeftBig logo_animacao_1" src="img/logo.png" alt="">
+      <p class="fontGochiPrincipal text-center animated jackInTheBox logo_animacao_2">Oficina de Hambúrguer</p>
+    </header>
+
+<div id="page"> 
+<img src="img/fundo2.jpg" alt=""> 
+</div>
+
+
+
+    <section class="py-5 bg-image-full" style="background-image: url('img/banner3.jpg');">
+<p class="fontGochiPrincipal text-center "><font color="white">Loja Física</font></p>
+	
+	<div id="map_content"></div>
+	
+		<form action="" method="post" id="form_route">
+		<p class="fontGochiPrincipal text-center "><font color="white"><font size="6"></font>
+		<label>Trace uma rota entre sua casa e a Oficina de Hamburguer!</font><font size="5"><input type="text" placeholder="Endereço completo" id="route_from" 
+		size="50" /></label>
+		<input type="submit" value="Traçar rota" class="btn finalizado" />
+		</p></font>
+	</form>
+  
+
+</section>
+    
+    <!-- Footer -->
+    <footer class="py-5 bg-cinza">
+      <div class="container">
+        <div class="row ">
+          <div class="col-md-4">   
+            <ul>
+              <li class="fontGochi tituloFooter">Oficina de Hambúrguer Info</li>
+              <li class="listaFooter">Sobre a ODH</li>
+              <li class="listaFooter">Termos de uso</li>
+              <li class="listaFooter">Fale Conosco</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li class="fontGochi tituloFooter">Minha ODH</li>
+              <li class="listaFooter">Ingredientes</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul>
+              <li class="fontGochi tituloFooter">Redes Socias</li>
+              <li class="listaRedes"><img  class="img-responsive blur" src="img/faceIcon.png" alt=""></li>
+              <li class="listaRedes"><img class="img-responsive blur" src="img/youtubeIcon.png" alt=""></li>
+            </ul>
+          </div>
+          </div>
+        <p class="m-0 text-center letraBranca ">Copyright &copy; Oficina de Hambúrguer 2017</p>
+      </div>
+      
+    </footer>
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>

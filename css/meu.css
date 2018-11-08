@@ -1,0 +1,297 @@
+      .fontGochi{
+        font-family: 'Gochi Hand', cursive;
+        font-size:24px;
+        color: #fff;
+      }
+
+      .fontGochiBrand{
+        font-family: 'Gochi Hand', cursive;        
+        font-size:22px;
+
+        
+      }
+
+      .fontGochiPrincipal{
+        font-family: 'Gochi Hand', cursive;
+        color: #ffa700;
+        font-size:60px;
+        text-shadow: black 0.1em 0.1em 0.2em;
+
+        
+      }
+
+       .fontGochi1{
+        font-family: 'Gochi Hand', cursive;
+        color: #b33b00;
+        font-size:52px;
+      }
+
+      .fontGochiBatata{
+        font-family: 'Gochi Hand', cursive;
+        color: #eada00;
+        font-size:52px;
+      }
+
+       .fontGochiBebidas{
+        font-family: 'Gochi Hand', cursive;
+        color: #156d00;
+        font-size:52px;
+      }
+
+      
+
+       .fontGochi2{
+        font-family: 'Gochi Hand', cursive;
+        color: #fff;
+        font-size:52px;
+      }
+
+      .fontGochi3{
+        font-family: 'Gochi Hand', cursive;
+        color: #ff8300;
+        font-size:52px;
+      }
+
+      .fontGochi4{
+        font-family: 'Cabin Sketch', cursive;
+        color:#1fff26;
+        font-size:40px;
+      }
+
+      .fontGochi5{
+        font-family: 'Gochi Hand', cursive;
+        color:#00884a;
+        font-size:22px;
+      }
+
+      .fontGochi6{
+        font-family: 'Gochi Hand', cursive;
+        color:#df712c;
+        font-size:40px;
+      }
+
+      .fontGochi7{
+        font-family: 'Cabin Sketch', cursive;
+        color: #ff5501;
+        font-size:40px;
+      }
+
+      .fontGochi8{
+        font-family: 'Gochi Hand', cursive;
+        color: #df712c;
+        font-size:40px;
+      }
+
+      .fontGochi9{
+        font-family: 'Gochi Hand', cursive;
+        color: #b33b00;
+        font-size:40px;
+      }
+
+
+       .fontGochimenos{
+        color: ;
+        font-family: 'Gochi Hand', cursive;
+        font-size:23px;
+      }
+
+      .link:hover{
+      color:#944e03;
+      text-decoration: none;
+      }
+
+      .bg-cinza{
+        background-color: #343a40;
+      }
+
+      .letraBranca{
+        color:#fff;
+      }
+
+     .listaFooter {
+      list-style-type:none;
+      color:#828282;
+      font-size:14px;
+      margin-top: 10px;
+      
+     }
+
+     .tituloFooter{
+      list-style-type: none;
+     }
+
+     .listaRedes {
+      list-style-type:none;
+      color:#828282;
+      font-size:14px;
+      display: inline;    
+      padding: 10px;
+     }
+
+     .meubuton{
+      background-color:#ffa700;
+      font-size:25px;
+      color: #fff;
+      border-color: #000;
+      border-width: 2px;
+     }
+
+     .meubuton:hover{
+      background-color:#b33b00;
+      font-size:25px;
+      color: #fff;
+      border-color: #e49500;
+      border-width: 5px;
+     }
+
+     .logo_animacao_1{
+      -webkit-animation-delay:0.6s;
+      -webkit-animation-duration:10s;
+     }
+
+     .logo_animacao_2{
+      -webkit-animation-delay:1.7s;
+
+     }
+
+     .animacao_3{
+      -webkit-animation-delay:1.7s;
+      -webkit-animation-duration:3s;
+
+     }
+
+     .animacao_4{
+      -webkit-animation-delay:1.9s;
+      -webkit-animation-duration:1s;
+
+     }
+
+     .blur:hover {
+    -webkit-filter: brightness(100%); /* Safari 6.0 - 9.0 */
+    filter: brightness(70%);
+    }
+
+    .acrescimos{
+      font-family: 'Cabin Sketch', cursive;
+      font-size:22px;
+      color:#fff;
+
+    }
+
+    .acompanhamentos{
+      font-family: 'Cabin Sketch', cursive;
+      font-size:22px;
+      color:#000;
+
+    }
+
+
+    #scroll {
+    width:350px;
+    height:480px;
+    overflow:auto;
+    padding:10px;
+    padding-top:30px;
+    
+
+    border-radius: 10px;
+
+    } 
+    .lousa{
+      border-radius:20px;
+    }
+
+    #divScroll{
+      margin-top: 35px;
+
+
+    }
+
+    .bg-cinza-claro{
+      background-color: #f3f3f3;
+    }
+
+     
+
+    #hamburguer {
+        
+        width: 350px; 
+        height: 300px;
+        
+    }
+
+      .select{
+        width:65px;
+      }
+
+      .finalizado{
+      background-color:#ffa700;
+      font-size:25px;
+      color: #fff;
+      border-color: #000;
+      border-width: 2px;
+     }
+
+     .finalizado:hover{
+      background-color:#b33b00;
+      font-size:25px;
+      color: #fff;
+      border-color: #e49500;
+      border-width: 5px;
+     }
+
+      .finalizado2{
+      background-color:#e24b00;
+      font-size:25px;
+      color: #fff;
+      border-color: #000;
+      border-width: 2px;
+     }
+
+     .finalizado2:hover{
+      background-color:#b33b00;
+      font-size:25px;
+      color: #fff;
+      border-color: #e49500;
+      border-width: 5px;
+     }
+
+     .labelLogin{
+      color:#fff;
+      font-family:'Gochi Hand', cursive;
+      font-size: 22px;
+
+     }
+
+    .labelLogin2{
+      color:#cc0000;
+      font-family:'Gochi Hand', cursive;
+      font-size: 22px;
+
+     }
+    .labelLogin3{
+      color:#077d00;
+      font-family:'Gochi Hand', cursive;
+      font-size: 22px;
+
+     }
+
+    #bg-verde{
+      background-color: #bfffbe !important;
+      border-radius: 10px;
+    }
+    #bg-branco{
+      background-color: #ffd3d3;
+      border-radius: 10px;
+    }
+
+    .liink{
+      text-decoration: none;
+      color:#fff;
+    }
+
+    .liink:hover{
+      text-decoration: none;
+      color: #fff;
+    }
+    
